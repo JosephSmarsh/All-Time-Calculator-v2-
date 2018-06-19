@@ -76,6 +76,7 @@ bool dateType::checkDay() {
 	return dateCheck;
 }
 
+// Used to return the number of days that have already passed in the year
 int dateType::returnDaysPassed() {
 	// Total days in the months prior to the current month
 	int totalDays = 0;
@@ -184,6 +185,7 @@ int dateType::returnDaysPassed() {
 		return 0;
 }
 
+// Used to return the number of days remaining in the year
 int dateType::returnDaysRemaining() {
 	if (isLeapYear() == true) {
 		return 366 - returnDaysPassed();
@@ -192,7 +194,3 @@ int dateType::returnDaysRemaining() {
 		return 365 - returnDaysPassed();
 
 }
-
-
-
-
